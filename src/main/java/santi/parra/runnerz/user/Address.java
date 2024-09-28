@@ -1,6 +1,5 @@
 package santi.parra.runnerz.user;
 
-
 public record Address(
         String street,
         String suite,

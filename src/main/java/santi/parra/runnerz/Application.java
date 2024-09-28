@@ -18,8 +18,8 @@ public class Application {
 
 	@Bean
 	UserHttpClient userHttpClient() {
-		RestClient restClient = RestClient.create("https://jsonplaceholder.typicode.com/");
-		HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(RestClientAdapter.create(restClient)).build();
-		return factory.createClient(UserHttpClient.class);
+	    RestClient restClient = RestClient.create("https://jsonplaceholder.typicode.com/");
+	    HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(RestClientAdapter.create(restClient)).build();
+	    return factory.createClient(UserHttpClient.class);
 	}
 }

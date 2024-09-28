@@ -1,5 +1,6 @@
 package santi.parra.runnerz.run;
 
+import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;
 
@@ -15,7 +16,7 @@ public record Run(
         @Positive
         Integer miles,
         Location location
-){
+) {
 
     public Run {
         if (!completedOn.isAfter(startedOn)) {
